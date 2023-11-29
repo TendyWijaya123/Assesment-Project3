@@ -13,7 +13,12 @@ import TenanRoute from "./routes/TenanRoute.js";
 import BarangRoute from "./routes/BarangRoute.js";
 const app = express();
 const APP_PORT = 5000;
-
+app.use(
+	cors({
+		credentials: true,
+		origin: "http://localhost:3000",
+	})
+);
 // (async () => {
 // 	try {
 // 		await db.sync({ force: true });
@@ -33,10 +38,3 @@ app.use(BarangRoute);
 app.listen(APP_PORT, () => {
 	console.log(`Server up and running... `);
 });
-
-app.use(
-	cors({
-		credentials: true,
-		origin: "http://localhost:3000",
-	})
-);
