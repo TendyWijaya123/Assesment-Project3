@@ -1,0 +1,41 @@
+### get all tenants
+GET http://localhost:5000/tenans
+
+### add Tenan
+POST  http://localhost:5000/tenans
+Content-Type: application/json
+
+{
+    "KodeTenan":"1",
+    "NamaTenan":"Tendy",
+    "HP":"0812342122"
+}
+
+### update Tenan
+PATCH http://localhost:5000/tenans/1
+Content-Type: application/json
+
+{
+    "NamaTenan":"Tendy Wijaya",
+    "HP":"0812342122"
+}
+
+### delete Tenan
+DELETE  http://localhost:5000/tenans/1
+
+
+### add barang
+POST  http://localhost:5000/barangs
+Content-Type: application/json
+
+{
+    "KodeBarang":"1",
+    "NamaBarang":"ayam bakar",
+    "Satuan":"pcs",
+    "HargaSatuan":20000,
+    "Stok":20
+}
+
+
+### get all barangs
+GET http://localhost:5000/barangs
